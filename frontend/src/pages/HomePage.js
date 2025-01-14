@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import Header from '../components/Header';
 import DishesList from '../components/DishesList';
-
+console.log(process.env)
 const HomePage = () => {
   const [dishes, setDishes] = useState([]);
 
   useEffect(() => {
-    fetch(' http://localhost:3010/api/getAllDish')
+    fetch(process.env.REACT_APP_API_URL+'/getAllDish')
       .then((response) => response.json())
       .then((data) => setDishes(data))
       .catch((error) => console.error('Error fetching dishes:', error));

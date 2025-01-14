@@ -20,7 +20,7 @@ const DishSuggester = () => {
 
   const fetchSuggestions = async () => {
     try {
-      const response = await axios.post('http://localhost:3010/api/getPossibleDishes', {
+      const response = await axios.post(process.env.REACT_APP_API_URL + '/getPossibleDishes', {
         ingredients,
       });
       setSuggestions(response.data.data);

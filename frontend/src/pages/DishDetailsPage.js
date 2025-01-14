@@ -7,7 +7,7 @@ const DishDetailsPage = () => {
   const [dish, setDish] = useState(null);
 
   useEffect(() => {
-    fetch(`http://localhost:3010/api/getDish/${name}`)
+    fetch(process.env.REACT_APP_API_URL + `/getDish/${name}`)
       .then((response) => response.json())
       .then((data) => setDish(data))
       .catch((error) => console.error('Error fetching dish:', error));
