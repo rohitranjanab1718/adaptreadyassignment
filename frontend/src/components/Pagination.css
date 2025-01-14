@@ -1,0 +1,44 @@
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 1rem 0;
+  }
+  
+  .button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    color: #4d347a;
+    background-color: blueviolet;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* .button:disabled {
+    background-color: #cccccc;
+    cursor: not-allowed;
+  }
+  
+  .active {
+    background-color: #28a745;
+    font-weight: bold;
+  }
+  */
+   @media (max-width: 768px) {
+    .button {
+      padding: 0.4rem 0.8rem;
+      font-size: 0.9rem;
+    }
+  
+    .pagination {
+      gap: 0.4rem;
+    }
+  }
+ 

@@ -15,7 +15,7 @@ dishRouter.get('/getAllDish', (req, res) => {
           error: err.message
         });
       }
-  
+
       try {
         const dishes = JSON.parse(data); // Parse JSON file content
         res.status(200).json({
@@ -38,6 +38,7 @@ dishRouter.get('/getAllDish', (req, res) => {
 dishRouter.get('/getDish/:name', (req, res) => {
     const filePath = path.join(__dirname, '..','output.json'); // Path to the JSON file
     const dishName = req.params.name.toLowerCase(); // Dish name from route parameters
+    console.log(dishName);
     fs.readFile(filePath, 'utf8', (err, data) => {
       if (err) {
         console.error('Error reading file:', err);

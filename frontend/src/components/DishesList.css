@@ -1,0 +1,119 @@
+div {
+    margin: 2rem auto;
+    padding: 1rem;
+    max-width: 80%;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: #fdfdfd;
+  }
+  
+  label {
+    display: inline-block;
+    margin: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+  }
+  
+  select {
+    margin-left: 0.5rem;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+    transition: all 0.3s ease;
+  }
+  
+  select:focus {
+    outline: none;
+    border-color: #ff6f61;
+    box-shadow: 0 0 5px rgba(255, 111, 97, 0.5);
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+  }
+  
+  thead {
+    background-color: #ff6f61;
+    color: white;
+  }
+  
+  th, td {
+    text-align: left;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ddd;
+  }
+  
+  tbody tr {
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+  }
+  
+  tbody tr:hover {
+    background-color: #ffebee;
+  }
+  
+  tbody tr:nth-child(odd) {
+    background-color: #f9f9f9;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #fff;
+  }
+  
+  th {
+    font-size: 1rem;
+    text-transform: uppercase;
+  }
+  
+  tfoot {
+    background-color: #f1f1f1;
+  }
+  
+  @media (max-width: 768px) {
+    div {
+      max-width: 95%;
+    }
+  
+    table, thead, tbody, th, td, tr {
+      display: block;
+    }
+  
+    th, td {
+      padding: 0.5rem;
+    }
+  
+    thead {
+      display: none;
+    }
+  
+    tbody tr {
+      margin-bottom: 1rem;
+      display: block;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+  
+    td {
+      text-align: right;
+      position: relative;
+      padding-left: 50%;
+    }
+  
+    td::before {
+      content: attr(data-label);
+      position: absolute;
+      left: 0;
+      width: 50%;
+      padding-left: 1rem;
+      font-weight: bold;
+      text-align: left;
+    }
+  }
+  
